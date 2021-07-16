@@ -1,0 +1,111 @@
+.product {
+	width: 100%;
+	@include flex-center;
+	height: 100vh;
+	position: relative;
+	.product-image {
+		flex: 1;
+		height: 100%;
+		width: 100%;
+		position: sticky;
+		@include flex-center;
+		img {
+			height: 75%;
+		}
+	}
+	.product-details {
+		flex: 1;
+		width: 100%;
+		background-color: white;
+		height: 100%;
+		overflow: auto;
+		display: block;
+		width: 100%;
+		padding: 3.5rem;
+		padding-top: 110px;
+		.title {
+			font-weight: bold;
+			font-size: 25px;
+			color: $primary-text;
+		}
+		.price {
+			font-weight: bold;
+			color: $secondary-text;
+		}
+		.description-wrapper {
+			@include flex-col;
+			align-items: flex-start;
+			// margin: 1.5rem 0;
+			.header {
+				color: $primary-text;
+				text-align: left;
+				margin: 1rem 0;
+			}
+
+			.description {
+				color: $secondary-text;
+				line-height: 175%;
+				text-align: left;
+			}
+		}
+		.underline {
+			background-color: rgba($color: $secondary, $alpha: 0.7);
+			height: 10px;
+			width: 120px;
+			display: table;
+		}
+		.specifics {
+			@include flex-col;
+			margin: 1.5rem 0;
+			.item {
+				width: 100%;
+				margin: 0.25rem 0;
+				text-align: left;
+				color: $secondary-text;
+				font-size: 16px;
+				font-weight: 500;
+			}
+		}
+		.cta {
+			@include flex;
+			margin: 1.5rem 0;
+			width: 100%;
+			.button {
+				flex: 1;
+				margin: 0 0.5rem;
+				svg {
+					margin-right: 1rem;
+				}
+			}
+			.secondary {
+				color: $primary;
+				background-color: $background;
+				border: 3px solid $primary;
+			}
+		}
+		@media screen and (max-width: $medium-screen) {
+			padding: 0 1rem;
+			.cta {
+				.button {
+					svg {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: $small-screen) {
+		flex-direction: column;
+		.product-details {
+			padding: 1rem;
+			display: block;
+			.cta {
+				flex-direction: column;
+				.button {
+					margin: 0.5rem 0;
+				}
+			}
+		}
+	}
+}

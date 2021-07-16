@@ -1,0 +1,53 @@
+.value {
+	@include width-adjust;
+	@include flex-col;
+	margin-top: 3rem;
+	.title-wrapper {
+		margin: 1.5rem 0;
+		@include flex-col;
+		justify-content: space-between;
+		div {
+			margin: 0.5rem 0;
+		}
+		.text {
+			text-align: center;
+			font-weight: bold;
+			color: $secondary-text;
+		}
+	}
+	.reasons {
+		@include flex-center;
+		width: 100%;
+		justify-content: space-around;
+		.reason {
+			position: relative;
+			width: 250px;
+			min-height: 300px;
+			@include flex-col;
+			text-align: center;
+			font-weight: bold;
+			color: $secondary;
+			margin: 1rem 0;
+			.number {
+				width: 100%;
+			}
+			.icon {
+				position: absolute;
+				top: 15%;
+				right: 15%;
+				z-index: -99;
+				opacity: 0.4;
+			}
+			.text {
+				margin: 1rem 0;
+				color: $secondary-text;
+				font-weight: bold;
+			}
+		}
+	}
+	@media screen and (max-width: $small-screen) {
+		.reasons {
+			flex-direction: column;
+		}
+	}
+}

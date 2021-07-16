@@ -1,0 +1,17 @@
+@mixin flex {
+	display: flex;
+}
+@mixin flex-center {
+	@include flex;
+	justify-content: center;
+	align-items: center;
+}
+@mixin flex-col {
+	@include flex-center;
+	flex-direction: column;
+}
+@mixin width-adjust {
+	width: 100%;
+	max-width: $max-width;
+	margin: 0 auto;
+}
