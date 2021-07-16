@@ -1,15 +1,20 @@
 {
-  "name": "guitar_land",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "10.2.3",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
-  }
+	"name": "guitar_land",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start"
+	},
+	"dependencies": {
+		"framer-motion": "^4.1.17",
+		"next": "10.2.3",
+		"react": "17.0.2",
+		"react-dom": "17.0.2",
+		"react-icons": "^4.2.0",
+		"react-lottie": "^1.2.3",
+		"react-multi-carousel": "^2.6.3",
+		"sass": "^1.35.2"
+	}
 }

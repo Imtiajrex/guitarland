@@ -1,0 +1,13 @@
+@import "./color-theme.scss";
+@import "./variables.scss";
+@import "./functions.scss";
+@import "./global.scss";
+
+.home {
+	@import "./nav.scss";
+	@import "./home/home.scss";
+}
+
+.product-page {
+	@import "./product/product.scss";
+}

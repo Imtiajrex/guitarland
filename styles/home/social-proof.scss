@@ -1,0 +1,75 @@
+.social-proof {
+	@include width-adjust;
+	@include flex-col;
+	min-height: 100vh;
+	.title-wrapper {
+		margin: 1.5rem 0;
+		@include flex-col;
+		justify-content: space-between;
+		.title {
+			margin: 0.5rem 0;
+		}
+		.underline {
+			margin: 0.5rem 0;
+		}
+		.stars {
+			margin: 0.5rem 0;
+			@include flex-center;
+			div {
+				margin: 0.25rem;
+			}
+		}
+		.text {
+			margin: 0.5rem 0;
+			text-align: center;
+		}
+	}
+	.reviews {
+		@include flex-center;
+		justify-content: space-between;
+		.review {
+			margin: 1rem;
+			width: 320px;
+			min-height: 300px;
+			border-radius: 25px;
+			background-color: white;
+			box-shadow: 0px 3px 20px rgba($color: $secondary, $alpha: 0.3);
+			padding: 1rem;
+			@include flex-col;
+			.reviewer {
+				@include flex-center;
+				padding: 0.5rem;
+				.image {
+					width: 65px;
+					height: 65px;
+					border-radius: 50%;
+				}
+				.name {
+					margin-left: 0.5rem;
+				}
+			}
+			.text {
+				@include flex-center;
+				flex-grow: 1;
+				height: 100%;
+				text-align: center;
+				color: $secondary-text;
+				line-height: 170%;
+				padding: 1.5rem 0.5rem;
+			}
+		}
+	}
+	@media screen and (max-width: $medium-screen) {
+		.reviews {
+			flex-direction: column;
+		}
+	}
+	@media screen and (max-width: $small-screen) {
+		.reviews {
+			.review {
+				width: 265px;
+				min-height: 365px;
+			}
+		}
+	}
+}

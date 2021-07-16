@@ -1,0 +1,41 @@
+.nav {
+	width: 100%;
+	max-width: $max-width;
+	margin: 0 auto;
+	padding: 0.5rem 0;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	@include flex-center;
+	justify-content: space-between;
+	z-index: 99;
+	.back {
+		width: 150px;
+		cursor: pointer;
+	}
+
+	.logo {
+		img {
+			width: 120px;
+			height: 70px;
+			cursor: pointer;
+		}
+	}
+	.menu {
+		width: 150px;
+		@include flex-center;
+		flex-direction: row;
+		justify-content: flex-end;
+		.item {
+			width: max-content;
+			padding: 1rem;
+			cursor: pointer;
+			transition: 0.2s ease-out;
+			transform: scale(1);
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+}
