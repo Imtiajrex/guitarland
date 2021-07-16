@@ -33,6 +33,7 @@ export default function TopProducts({ products }) {
 			price={product.price}
 			id={product.id}
 			slug={product.slug}
+			description={product.description}
 		/>
 	));
 	return (
@@ -56,7 +57,7 @@ export default function TopProducts({ products }) {
 	);
 }
 
-export function Product({ image = "", title = "", price = "", id = "", slug }) {
+export function Product({ image, title, price, id, slug, description }) {
 	const addCart = (e) => e.preventDefault();
 	return (
 		<Link href={"/products/" + slug}>
@@ -67,7 +68,15 @@ export function Product({ image = "", title = "", price = "", id = "", slug }) {
 				<div className="info">
 					<div className="name regular">{title}</div>
 					<div className="price small">{price}৳</div>
-					<a className="link regular" onClick={addCart}>
+					<a
+						className="link regular snipcart-add-item"
+						data-item-id={id}
+						data-item-price={price}
+						data-item-url={"/products/" + slug}
+						data-item-description={description}
+						data-item-image={API_URL + image}
+						data-item-name={title}
+					>
 						<RiShoppingBagLine size={35} color={"#ff9536"} /> Add To Cart
 					</a>
 				</div>
