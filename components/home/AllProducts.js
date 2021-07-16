@@ -9,33 +9,35 @@ export default function TopProducts({ categories }) {
 				<div className="title large">Musical Instrument</div>
 			</div>
 			<div className="categories">
-				{categories.map((cat, index) => (
-					<div
-						className={`category regular ${
-							cat.id == categories[category].id && "active"
-						}`}
-						key={index}
-						onClick={() => setCategory(index)}
-					>
-						{cat.Name}
-					</div>
-				))}
+				{categories.length > 0 &&
+					categories.map((cat, index) => (
+						<div
+							className={`category regular ${
+								cat.id == categories[category].id && "active"
+							}`}
+							key={index}
+							onClick={() => setCategory(index)}
+						>
+							{cat.Name}
+						</div>
+					))}
 			</div>
 			<div className="products">
-				{categories[category].products.length > 0 ? (
-					categories[category].products.map((product, index) => (
-						<Product
-							image={product.Image.url}
-							key={index}
-							title={product.Title}
-							price={product.price}
-							id={product.id}
-							slug={product.slug}
-						/>
-					))
-				) : (
-					<h3>No Products Found!</h3>
-				)}
+				{categories.length > 0 &&
+					(categories[category].products.length > 0 ? (
+						categories[category].products.map((product, index) => (
+							<Product
+								image={product.Image.url}
+								key={index}
+								title={product.Title}
+								price={product.price}
+								id={product.id}
+								slug={product.slug}
+							/>
+						))
+					) : (
+						<h3>No Products Found!</h3>
+					))}
 			</div>
 		</div>
 	);
