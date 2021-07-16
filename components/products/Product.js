@@ -8,6 +8,9 @@ export default function Product({ product }) {
 		<div className="product">
 			<ProductImage title={product.Title} image={product.Image.url} />
 			<ProductDetails
+				id={product.id}
+				image={product.Image.url}
+				slug={product.slug}
 				title={product.Title}
 				price={product.price}
 				description={product.Description}
@@ -38,11 +41,10 @@ function ProductDetails({
 	brand,
 	type,
 	category,
+	id,
+	image,
+	slug,
 }) {
-	const addCart = (e) => {
-		e.prevenDefault();
-		console.log();
-	};
 	return (
 		<div className="product-details">
 			<div className="title">{title}</div>
@@ -61,7 +63,15 @@ function ProductDetails({
 				<div className="item">Category: {category}</div>
 			</div>
 			<div className="cta">
-				<button className="button" onClick={addCart}>
+				<button
+					className="button snipcart-add-item"
+					data-item-id={id}
+					data-item-price={price}
+					data-item-url={"/products/" + slug}
+					data-item-description={description}
+					data-item-image={API_URL + image}
+					data-item-name={title}
+				>
 					<RiShoppingBagLine size={25} color={"#fff"} /> ADD TO CART
 				</button>
 				<button className="button secondary">BUY NOW</button>

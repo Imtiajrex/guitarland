@@ -8,8 +8,10 @@ export default function Nav() {
 	const router = useRouter();
 	return (
 		<div className="nav">
-			<div className="back" onClick={() => router.back()}>
-				<IoIosArrowBack size={20} color={"#3F3F44"} />
+			<div className="back">
+				<Link href="/">
+					<IoIosArrowBack size={20} color={"#3F3F44"} />
+				</Link>
 			</div>
 			<div className="logo">
 				<Link href="/">
@@ -22,11 +24,10 @@ export default function Nav() {
 						<BiSearchAlt size={20} color={"#3F3F44"} />
 					</div>
 				</Link>
-				<Link href="checkout">
-					<div className="item">
-						<RiShoppingBagLine size={20} color={"#3F3F44"} />
-					</div>
-				</Link>
+
+				<div className="item snipcart-checkout">
+					<RiShoppingBagLine size={20} color={"#3F3F44"} />
+				</div>
 			</div>
 		</div>
 	);

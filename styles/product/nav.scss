@@ -9,7 +9,7 @@
 	transform: translateX(-50%);
 	@include flex-center;
 	justify-content: space-between;
-	z-index: 99;
+	z-index: 1;
 	.back {
 		width: 150px;
 		cursor: pointer;

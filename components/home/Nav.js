@@ -16,11 +16,9 @@ export default function Nav() {
 						<BiSearchAlt size={20} color={"#3F3F44"} />
 					</div>
 				</Link>
-				<Link href="checkout">
-					<div className="item">
-						<RiShoppingBagLine size={20} color={"#3F3F44"} />
-					</div>
-				</Link>
+				<div className="item snipcart-checkout">
+					<RiShoppingBagLine size={20} color={"#3F3F44"} />
+				</div>
 			</div>
 		</div>
 	);
