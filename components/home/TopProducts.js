@@ -25,17 +25,19 @@ const responsive = {
 };
 
 export default function TopProducts({ products }) {
-	const Products = products.map((product, index) => (
-		<Product
-			image={product.Image.url}
-			key={index}
-			title={product.Title}
-			price={product.price}
-			id={product.id}
-			slug={product.slug}
-			description={product.description}
-		/>
-	));
+	const Products =
+		products.length > 0 &&
+		products.map((product, index) => (
+			<Product
+				image={product.Image.url}
+				key={index}
+				title={product.Title}
+				price={product.price}
+				id={product.id}
+				slug={product.slug}
+				description={product.description}
+			/>
+		));
 	return (
 		<div className="top-products">
 			<div className="title-wrapper">
