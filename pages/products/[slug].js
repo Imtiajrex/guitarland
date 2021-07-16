@@ -17,9 +17,12 @@ export default function product({ product }) {
 export async function getStaticPaths() {
 	const res = await fetch(API_URL + "/products");
 	const products = await res.json();
-	const paths = products.map((element) => ({
-		params: { slug: element.slug },
-	}));
+	const paths =
+		products.length > 0
+			? products.map((element) => ({
+					params: { slug: element.slug },
+			  }))
+			: [];
 
 	return { paths, fallback: false };
 }
