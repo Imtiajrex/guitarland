@@ -1,5 +1,6 @@
 import { BsFillPeopleFill, BsFillStarFill } from "react-icons/bs";
 import { AiFillLike } from "react-icons/ai";
+import Link from "next/link";
 export default function Value() {
 	return (
 		<div className="value">
