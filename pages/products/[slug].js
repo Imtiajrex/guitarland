@@ -24,7 +24,7 @@ export async function getStaticPaths() {
 			  }))
 			: [];
 
-	return { paths, fallback: false, revalidate: 86400 };
+	return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }) {
