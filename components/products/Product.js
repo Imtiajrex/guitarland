@@ -6,10 +6,10 @@ export default function Product({ product }) {
 	console.log(product);
 	return (
 		<div className="product">
-			<ProductImage title={product.Title} image={product.Image.url} />
+			<ProductImage title={product.Title} image={product?.Image?.url} />
 			<ProductDetails
 				id={product.id}
-				image={product.Image.url}
+				image={product?.Image?.url}
 				slug={product.slug}
 				title={product.Title}
 				price={product.price}
@@ -27,7 +27,7 @@ export default function Product({ product }) {
 function ProductImage({ title, image }) {
 	return (
 		<div className="product-image">
-			<img src={API_URL + image} alt={title} />
+			<img src={image} alt={title} />
 		</div>
 	);
 }
@@ -69,7 +69,7 @@ function ProductDetails({
 					data-item-price={price}
 					data-item-url={"/products/" + slug}
 					data-item-description={description}
-					data-item-image={API_URL + image}
+					data-item-image={image}
 					data-item-name={title}
 				>
 					<RiShoppingBagLine size={25} color={"#fff"} /> ADD TO CART

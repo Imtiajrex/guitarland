@@ -29,7 +29,7 @@ export default function TopProducts({ products }) {
 		products.length > 0 &&
 		products.map((product, index) => (
 			<Product
-				image={product.Image.url}
+				image={product?.Image?.url}
 				key={index}
 				title={product.Title}
 				price={product.price}
@@ -65,7 +65,7 @@ export function Product({ image, title, price, id, slug, description }) {
 		<Link href={"/products/" + slug}>
 			<div className="product">
 				<div className="image">
-					<img src={API_URL + image} alt={title} />
+					<img src={image} alt={title} />
 				</div>
 				<div className="info">
 					<div className="name regular">{title}</div>
@@ -76,7 +76,7 @@ export function Product({ image, title, price, id, slug, description }) {
 						data-item-price={price}
 						data-item-url={"/products/" + slug}
 						data-item-description={description}
-						data-item-image={API_URL + image}
+						data-item-image={image}
 						data-item-name={title}
 					>
 						<RiShoppingBagLine size={35} color={"#ff9536"} /> Add To Cart

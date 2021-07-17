@@ -27,7 +27,7 @@ export default function TopProducts({ categories }) {
 					(categories[category].products.length > 0 ? (
 						categories[category].products.map((product, index) => (
 							<Product
-								image={product.Image.url}
+								image={product?.Image?.url}
 								key={index}
 								title={product.Title}
 								price={product.price}

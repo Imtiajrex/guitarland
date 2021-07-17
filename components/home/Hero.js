@@ -19,7 +19,7 @@ export default function Hero({ featured }) {
 			</div>
 			<div className="featured">
 				<div className="image">
-					<img src={API_URL + featured?.Image?.url} alt="Featured Product" />
+					<img src={featured?.Image?.url} alt="Featured Product" />
 				</div>
 				<div className="text">
 					<div className="title regular">{featured?.Title}</div>
