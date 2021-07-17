@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { API_URL } from "utils/url";
 
 export default function Hero({ featured }) {
 	return (
@@ -15,7 +14,9 @@ export default function Hero({ featured }) {
 					Our guitars are made with quality components that you will want to
 					play right now!
 				</p>
-				<button className="button regular">FIND YOUR GUITAR</button>
+				<Link href="/search">
+					<a className="button regular">FIND YOUR GUITAR</a>
+				</Link>
 			</div>
 			<div className="featured">
 				<div className="image">

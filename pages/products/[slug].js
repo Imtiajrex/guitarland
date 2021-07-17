@@ -24,12 +24,12 @@ export async function getStaticPaths() {
 			  }))
 			: [];
 
-	return { paths, fallback: false };
+	return { paths, fallback: false, revalidate: 86400 };
 }
 
 export async function getStaticProps({ params }) {
 	const res = await fetch(API_URL + "/products?slug=" + params.slug);
 	const product = await res.json();
 
-	return { props: { product: product[0] } };
+	return { props: { product: product[0], revalidate: 86400 } };
 }

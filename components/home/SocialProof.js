@@ -33,7 +33,7 @@ export default function SocialProof() {
 				<div className="review">
 					<div className="reviewer">
 						<img src="" className="image" />
-						<a className="name link">@Ashish Dey</a>
+						<a className="name ">@Ashish Dey</a>
 					</div>
 					<div className="text">
 						I wouldn't call it the best instrumental store. but trustable. Buy
@@ -44,7 +44,7 @@ export default function SocialProof() {
 				<div className="review">
 					<div className="reviewer">
 						<img src="" className="image" />
-						<a className="name link">@Ahidur Rahman Hridoy</a>
+						<a className="name ">@Ahidur Rahman Hridoy</a>
 					</div>
 					<div className="text">
 						Guitar-Land is a name of trust . They are just awsome. Those who
@@ -55,7 +55,7 @@ export default function SocialProof() {
 				<div className="review">
 					<div className="reviewer">
 						<img src="" className="image" />
-						<a className="name link">@Ashish Dey</a>
+						<a className="name ">@Ashish Dey</a>
 					</div>
 					<div className="text">
 						Their behaviour, service,products everything is really amazing.All
@@ -65,7 +65,10 @@ export default function SocialProof() {
 					</div>
 				</div>
 			</div>
-			<button className="button regular">Find Your Guitar</button>
+
+			<Link href="/search">
+				<a className="button regular">FIND YOUR GUITAR</a>
+			</Link>
 		</div>
 	);
 }

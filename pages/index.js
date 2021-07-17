@@ -33,5 +33,5 @@ export async function getStaticProps() {
 	res = await fetch(API_URL + "/categories");
 	const categories = await res.json();
 
-	return { props: { featured, top_products, categories } };
+	return { props: { featured, top_products, categories }, revalidate: 86400 };
 }

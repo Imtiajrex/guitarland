@@ -49,7 +49,9 @@ export default function Value() {
 					</div>
 				</div>
 			</div>
-			<button className="button regular">Find Your Guitar</button>
+			<Link href="/search">
+				<a className="button regular">FIND YOUR GUITAR</a>
+			</Link>
 		</div>
 	);
 }
