@@ -2,7 +2,6 @@ import { RiShoppingBagLine } from "react-icons/ri";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { API_URL } from "utils/url";
 import Link from "next/link";
 const responsive = {
 	superLargeDesktop: {
@@ -60,10 +59,9 @@ export default function TopProducts({ products }) {
 }
 
 export function Product({ image, title, price, id, slug, description }) {
-	const addCart = (e) => e.preventDefault();
 	return (
 		<Link href={"/products/" + slug}>
-			<div className="product">
+			<a className="product">
 				<div className="image">
 					<img src={image} alt={title} />
 				</div>
@@ -82,7 +80,7 @@ export function Product({ image, title, price, id, slug, description }) {
 						<RiShoppingBagLine size={35} color={"#ff9536"} /> Add To Cart
 					</a>
 				</div>
-			</div>
+			</a>
 		</Link>
 	);
 }
