@@ -42,7 +42,7 @@ export default function TopProducts({ products }) {
 		<div className="top-products">
 			<div className="title-wrapper">
 				<div className="title large">
-					Our <span>Top Products </span>
+					Our <span>Top Products</span>
 				</div>
 			</div>
 			<div className="products">
